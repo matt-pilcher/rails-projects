@@ -1,4 +1,6 @@
 require 'rest-client'
 
-url = "http://rails-projects-mpilcher90.c9users.io/"
+print "Enter a url: "
+url = gets.chomp
+
 puts RestClient.get(url)
