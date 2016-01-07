@@ -10,4 +10,12 @@ class User < ActiveRecord::Base
                     
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+  
+  #User digest for fixtures. Need for login integration test
+  #Don't use min_cost in production
+  def User.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                  BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
 end
