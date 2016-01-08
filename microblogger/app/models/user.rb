@@ -44,6 +44,12 @@ class User < ActiveRecord::Base
     update_attribute(:remember_digest, nil)
   end
   
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    Micropost.where("user_id = ?", id) # '?' escapes the id to prevent SQL injection
+  end
+  
   private
     # Converts email to all lower-case.
     def downcase_email
