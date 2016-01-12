@@ -60,6 +60,11 @@ class User < ActiveRecord::Base
     Micropost.where("user_id = ?", id) # '?' escapes the id to prevent SQL injection
   end
   
+  # Returns a user's status feed.
+  def feed
+    Micropost.where("user_id IN (?) OR user_id = ?", following_ids, id)
+  end
+  
   # Follows a user.
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
