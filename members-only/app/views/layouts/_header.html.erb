@@ -6,7 +6,7 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", about_path %></li>
           <% if logged_in? %>
-            <li><%= link_to "Articles", '#' %></li>
+            <li><%= link_to "Articles", articles_path %></li>
             <li><%= link_to "Profile", current_user %></li>
             <li><%= link_to "Logout", logout_path, method: "delete" %></li>
           <% else %>
