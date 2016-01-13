@@ -54,15 +54,12 @@ class User < ActiveRecord::Base
     update_attribute(:remember_digest, nil)
   end
   
-  # Defines a proto-feed.
-  # See "Following users" for the full implementation.
-  def feed
-    Micropost.where("user_id = ?", id) # '?' escapes the id to prevent SQL injection
-  end
-  
   # Returns a user's status feed.
   def feed
-    Micropost.where("user_id IN (?) OR user_id = ?", following_ids, id)
+    following_ids = "SELECT followed_id FROM relationships
+                     WHERE  follower_id = :user_id"
+    Micropost.where("user_id IN (#{following_ids})
+                     OR user_id = :user_id", user_id: id)
   end
   
   # Follows a user.
