@@ -12,5 +12,5 @@ Flight.create( date: '02.03.2016', from_id: 1, to_id: 4, duration: 350 )
 Flight.create( date: '02.03.2016', from_id: 2, to_id: 4, duration: 350 )
 Flight.create( date: '02.04.2016', from_id: 3, to_id: 1, duration: 350 )
 Flight.create( date: '02.04.2016', from_id: 2, to_id: 3, duration: 350 )
-Flight.create( date: '02.04.2016', from_id: 1, to_id: 3, duration: 350 )
+Flight.create( date: '02.04.2016', from_id: 3, to_id: 4, duration: 350 )
 
