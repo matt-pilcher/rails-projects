@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  def setup
+    @user = users(:matt)
+    @other_user = users(:ryan)
+  end
+  
+    
+  
 end
