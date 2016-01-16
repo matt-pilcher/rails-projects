@@ -1,1 +1,9 @@
-<h1>Welcome</h1>
+<h1>Kitten List</h1>
+
+<% @kittens.each do |kitten| %>
+  <li>
+    <%= kitten.name %> | <%= kitten.age %> | <%= kitten.color %>
+  </li>
+<% end %>
+
+  
