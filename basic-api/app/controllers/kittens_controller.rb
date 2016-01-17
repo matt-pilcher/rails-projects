@@ -16,6 +16,17 @@ class KittensController < ApplicationController
   end
   
   def edit
+    @kitten = Kitten.find(params[:id])
+  end
+  
+  def update
+    @kitten = Kitten.find(params[:id])
+    if @kitten.update_attributes(kitten_params)
+      flash[:success] = "Kitten updated!"
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
   
   private

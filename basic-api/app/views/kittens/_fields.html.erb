@@ -1,0 +1,20 @@
+<%= form_for @kitten, url: kittens_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.label :age %><br>
+    <%= f.text_field :age %>
+  </p>
+  
+  <p>
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
