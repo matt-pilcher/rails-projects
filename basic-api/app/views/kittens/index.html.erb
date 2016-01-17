@@ -3,6 +3,7 @@
 <% @kittens.each do |kitten| %>
   <li>
     <%= kitten.name %> | <%= kitten.age %> | <%= kitten.color %>
+    <%= link_to 'Delete', kitten, html_options = {method: :delete} %>
   </li>
 <% end %>
 
