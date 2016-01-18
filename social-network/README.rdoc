@@ -1,0 +1,3 @@
+== README
+
+This is a social networking site modeled after Facebook
