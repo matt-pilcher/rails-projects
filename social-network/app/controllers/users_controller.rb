@@ -41,13 +41,6 @@ class UsersController < ApplicationController
   
   private
   
-    def logged_in_user
-      unless logged_in?
-        flash[:danger] = "Please login to to continue"
-        redirect_to login_url
-      end
-    end
-  
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
