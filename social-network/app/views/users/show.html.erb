@@ -10,6 +10,9 @@
     <h3>
       <%= @user.name %>
     </h3>
+    <section class="post_form">
+        <%= render 'shared/post_form' %>
+      </section>
     <% if @user.posts.any? %>
       <ol class="posts">
         <%= render @posts %>
