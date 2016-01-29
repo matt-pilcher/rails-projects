@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'users#new'
+  root 'static_pages#home'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :posts,  only: [:create, :destroy]
   
-  get 'home' => 'static_pages#home'
+  #get 'home' => 'static_pages#home'
   
   
 
