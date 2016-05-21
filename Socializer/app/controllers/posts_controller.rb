@@ -13,11 +13,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    if @post = Post.create(post_params)
-      flash[:success] = "Post created!"
+    @post = Post.create(post_params)
+    if @post.save
       redirect_to posts_path
     else
-      flash.now[:alert] = "Error! Please check the form."
+      flash.now[:alert] = "Image or caption field can't be blank"
       render :new
     end
   end
