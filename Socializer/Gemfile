@@ -7,6 +7,8 @@ gem 'simple_form'
 gem 'capybara'
 gem 'factory_girl_rails'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'devise'
+
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
