@@ -17,4 +17,6 @@ feature 'User authentication' do
     expect(page).to_not have_content('Register')
     expect(page).to have_content('Logout')
   end
+  
+  
 end
