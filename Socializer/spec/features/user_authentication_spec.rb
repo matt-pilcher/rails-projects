@@ -11,7 +11,7 @@ feature 'User authentication' do
     
     click_link 'Login'
     fill_in 'Email', with: 'user@example.com'
-    fill_in 'Password', with: 'foobar'
+    fill_in 'Password', with: 'password'
     click_button 'Log in'
     
     expect(page).to_not have_content('Register')
@@ -22,10 +22,10 @@ feature 'User authentication' do
     visit '/'
     click_link 'Login'
     fill_in 'Email', with: 'user@example.com'
-    fill_in 'Password', with: 'foobar'
+    fill_in 'Password', with: 'password'
     
     click_button 'Log in'
-    click_button 'Logout'
+    click_link 'Logout'
     expect(page).to have_content('You need to sign in or sign up before continuing.')
   end
   
