@@ -5,10 +5,10 @@
         =@post.user.user_name
     .image.center-block
       =image_tag @post.image.url(:medium), class:'img-responsive'
-    %p.caption
+    .caption
       =@post.caption
     .post-bottom
-      .caption
+      .comment-area
         -if @post.comments
           -@post.comments.each do |comment|
             .comment

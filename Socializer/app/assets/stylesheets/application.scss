@@ -55,30 +55,71 @@ body {
   border-radius: 5px;
   border-width: 1px;
   margin-bottom: 60px;
-}
-
-.post-head {
-  height: 64px;
-  padding: 14px 20px;
-  color: #35b1b1;
-  font-size: 15px;
-  line-height: 18px;
-  .thumbnail {}
-  .name {
-    display: block;
+  .post-head {
+    flex-direction: row;
+    height: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    color: #35b1b1;
+    font-size: 15px;
+    line-height: 18px;
+    .user-name, 
+    .time-ago {
+      display: inline;
+    }
+    .user-name {
+      font-weight: 500;
+    }
+    .time-ago {
+      float: right;
+    }
+  }
+  .image {
+    padding: 0 10px 0 10px;
+  }
+  .caption {
+    padding: 12px 24px;
   }
 }
-
-.image {
-  padding: 0 10px 0 10px;
-}
-
-.caption {
-  padding: 24px 24px;
+.post-bottom {
+  .user-name, 
+  .comment-content {
+    display: inline;
+  }
+  .user-name {
+    font-weight: 500;
+    margin-right: 0.3em;
+    color: #35b1b1;
+    font-size: 15px;
+  }
+  .user-name, .caption-content {
+    display: inline;
+  }
+  .comment {
+    margin-bottom: 17px;
+    .user-name {
+      font-weight: 500;
+      margin-right: 0.3em;
+    }
+    .delete-comment {
+      float: right;
+      color: #35b1b1;
+    }
+  }
+  .comment-content {
+    margin-right: .3em;
+    font-size: 15px;
+    line-height: 18px;
+    border: medium none;
+    width: 100%;
+  }
+  margin-bottom: 7px;
+  padding: 10px 24px;
   font-size: 15px;
   line-height: 18px;
-
 }
+
 
 .form-wrapper {
   width: 60%;
@@ -94,3 +135,9 @@ body {
   margin-bottom: 40px;
 }
 
+.comment-area {
+  padding: 14px 24px;
+  font-size: 15px;
+  background: #fff;
+  line-height: 18px;
+}
