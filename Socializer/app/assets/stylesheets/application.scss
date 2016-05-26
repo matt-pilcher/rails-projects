@@ -96,7 +96,7 @@ body {
   .user-name, .caption-content {
     display: inline;
   }
-  .comment {
+  #comment {
     margin-bottom: 17px;
     .user-name {
       font-weight: 500;
@@ -135,9 +135,22 @@ body {
   margin-bottom: 40px;
 }
 
-.comment-area {
+.comments {
   padding: 14px 24px;
   font-size: 15px;
   background: #fff;
   line-height: 18px;
+}
+.comment_content {
+  font-size: 15px;
+  line-height: 18px;
+  border: medium none;
+  width: 100%;
+  color: #4b4f54;
+  background: #fff;
+  padding: 10px 3px;
+  margin-bottom: 5px;
+}
+.comment-form {
+  margin: 0 24px 0 24px;
 }

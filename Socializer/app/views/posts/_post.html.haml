@@ -9,11 +9,11 @@
     .post-bottom
       .caption
         =post.caption
-      .comment-area
+      .comments{id: "comments_#{post.id}"}
         -if post.comments
           =render post.comments, post: post
-        .comment-form
-          =form_for [post, post.comments.new] do |f|
-            =f.text_field :content, placeholder: 'Add a comment...'
-            =f.button :submit, class: 'btn-success'
+    .comment-form
+      =form_for([post, post.comments.build], remote: true) do |f|
+        =f.text_field :content, placeholder: 'Add a comment...', class: "comment_content", id: "comment_content_#{post.id}"
+        =f.button :submit, class: 'btn-success'
 
