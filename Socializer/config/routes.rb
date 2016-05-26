@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'posts#index'
+  # Redirect root route to avoid devise flash alert
+  authenticated :user do
+    root to: 'posts#index', as: :authenticated_root
+  end
+
+  root to: redirect('/users/sign_in')
   
   resources :posts do
     resources :comments
