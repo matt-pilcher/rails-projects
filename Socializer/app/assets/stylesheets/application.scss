@@ -44,24 +44,19 @@ html {
 
 .panel {
   border-radius: 8px;
+  background: #ededed;
+  color: #474747;
 }
 
 
 body {  
-  background-color: #35b1b1;
+  background-color: #474747;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-.navbar {
-  margin-bottom: 0px;
 }
 
 .alert {
-  margin-bottom: 0px;
-}
-.navbar-brand {
-  a {
-    color: #35b1b1;
-  }
+  background: #ededed;
+  margin: 10px 10px 0 10px ;
 }
 .login-bg {
   padding-top: 4em;
@@ -72,7 +67,12 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
 .test {
+  border-top: 0px;
   width: 100%;
 }
 
@@ -87,16 +87,18 @@ body {
 
 
 .navbar-brand {
+  height: 24px;
   a {
-    color: #35b1b1;
+    color: #474747;
   }
 }
 
 .navbar-default {
-  background-color: #a1ffff;
-  height: 54px;
+  background-color: #ededed;
+  height: 69px;
   .navbar-nav li a {
-    color: #35b1b1;
+    margin-top: 10px;
+    color: #6b6b6b;
   }
 }
 
@@ -113,7 +115,7 @@ body {
 }
 
 .post {
-  background-color: #e3ffff;
+  background-color: #ededed;
   border-color: #edeeee;
   border-style: solid;
   border-radius: 5px;
