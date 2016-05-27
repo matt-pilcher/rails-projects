@@ -17,22 +17,88 @@
  *= require_tree .
  *= require_self
 */
+
+html {  
+  height: 100%;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('background2.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.input-lg {
+  margin-bottom: 11px;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+  background: #ededed;
+  color: #474747;
+}
+
+
 body {  
-  background-color: #35b1b1;
+  background-color: #474747;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+.alert {
+  background: #ededed;
+  margin: 10px 10px 0 10px ;
+}
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('background2.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.test {
+  border-top: 0px;
+  width: 100%;
+}
+
+#image-preview {
+  margin: 0px auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+
 .navbar-brand {
+  height: 24px;
   a {
-    color: #35b1b1;
+    color: #474747;
   }
 }
 
 .navbar-default {
-  background-color: #a1ffff;
-  height: 54px;
+  background-color: #ededed;
+  height: 69px;
   .navbar-nav li a {
-    color: #35b1b1;
+    margin-top: 10px;
+    color: #6b6b6b;
   }
 }
 
@@ -49,7 +115,7 @@ body {
 }
 
 .post {
-  background-color: #e3ffff;
+  background-color: #ededed;
   border-color: #edeeee;
   border-style: solid;
   border-radius: 5px;
@@ -80,6 +146,7 @@ body {
   }
   .caption {
     padding: 12px 24px;
+    background: #fff;
   }
 }
 .post-bottom {
@@ -146,11 +213,17 @@ body {
   line-height: 18px;
   border: medium none;
   width: 100%;
-  color: #4b4f54;
-  background: #fff;
-  padding: 10px 3px;
+  color: #474747;
+  border-radius: 0 0 5px 5px;
+  background: #d5d5d5;
+  padding: 10px 8px;
   margin-bottom: 5px;
 }
-.comment-form {
-  margin: 0 24px 0 24px;
+.comment-submit {
+  background: #ff8e19;
+  color: #474747;
+  border-radius: 5px;
+  padding: 5px;
+  border: 0;
 }
+
