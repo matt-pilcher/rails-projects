@@ -227,4 +227,34 @@ body {
   padding: 5px;
   border: 0;
 }
+#user_avatar {
+  margin: 20px auto;
+}
+.profile-header {
+  background-color: #ededed;
+  border-color: #edeeee;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 20px 0;
+}
+.profile-image {
+  margin: 20px auto;
+  height: 152px;
+  width: 152px;
+}
+.user-name-and-follow {
+  display: inline;
+}
+.profile-user-name {
+  display: inline;
+}
+.profile-bio {
+  margin-top: 20px;
+}
+.edit-button {
+  float: right;
+}
+
+
 
