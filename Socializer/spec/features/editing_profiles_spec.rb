@@ -38,6 +38,6 @@ feature 'viewing user profiles' do
 
     expect(page).to_not have_content('Change your profile image:')
     expect(page.current_path).to eq(root_path)
-    expect(page).to have_content("You don't have permission to access this page")
+    expect(page).to have_content("You don't have permission to access this page.")
   end
 end

@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     
     if @post.save
-      redirect_to posts_path
+      redirect_to profile_path(current_user.user_name)
     else
       flash.now[:alert] = "Image or caption field can't be blank"
       render :new
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       flash[:success] = "Updated successfully"
-      redirect_to posts_path
+      redirect_to profile_path(current_user.user_name)
     else
       flash.now[:alert] = "Error! Please check the form."
       render :edit
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     flash[:success] = "Post deleted."
-    redirect_to root_path
+    redirect_to profile_path(current_user.user_name)
   end
 
   private
@@ -57,7 +57,7 @@ class PostsController < ApplicationController
     def post_protect
       unless current_user == @post.user
         flash[:alert] = "Unauthorized"
-        redirect_to posts_path
+        redirect_to root_path
       end
     end
 end  

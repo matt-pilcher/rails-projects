@@ -1,4 +1,7 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :owned_profile, only: [:edit, :update]
+  
   def show
     @user = User.find_by(user_name: params[:user_name])
     @posts = User.find_by(user_name: params[:user_name]).posts.order('created_at DESC')
@@ -24,5 +27,13 @@ class ProfilesController < ApplicationController
 
     def profile_params  
       params.require(:user).permit(:avatar, :bio)
+    end
+    
+    def owned_profile  
+      @user = User.find_by(user_name: params[:user_name])
+      unless current_user == @user
+        flash[:alert] = "You don't have permission to access this page."
+        redirect_to root_path
+      end
     end
 end
