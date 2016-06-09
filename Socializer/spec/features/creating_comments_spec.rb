@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'Posting comments' do
   background do
-    user = create(:user)
+    user = create :user
     job = create(:post, user_id: user.id)
     
     visit '/'
@@ -14,7 +14,7 @@ feature 'Posting comments' do
   scenario 'can leave a comment' do
     visit '/'
     fill_in "comment_content_#{post.id}", with: "My insightful comment"
-    click_button 'Send'
+    click_button 'submit'
     
     expect(page).to have_content('My insightful comment')
   end

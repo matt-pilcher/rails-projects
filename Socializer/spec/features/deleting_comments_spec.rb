@@ -11,7 +11,7 @@ feature 'Deleting comments' do
     click_button 'Log in'
   end
   
-  feature 'can delete a comment' do
+  scenario 'can delete a comment' do
     visit '/'
     fill_in "comment_content_#{post.id}", with: "My insightful comment"
     click_button 'Send'
